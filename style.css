@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+body {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-lighter: hsl(179, 47%, 52%);
+  --yellow: hsl(71, 73%, 54%);
+  --lightGrey: hsl(204, 43%, 93%);
+  --blueGrey: hsl(218, 22%, 67%);
+  --white: hsl(69, 69%, 100%);
+
+  font-family: "Karla", sans-serif;
+  background-color: var(--lightGrey);
+  color: var(--white);
+}
+
+main {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:70px 35px;
+}
+
+section {
+  padding: 32px;
+}
+
+h1 {
+  color: var(--cyan);
+  margin-bottom:30px;
+}
+
+h2 {
+  color: var(--yellow);
+  font-size: 16px;
+}
+
+h3 {
+  margin-bottom: 16px;
+  color:white;
+}
+
+.card {
+  box-shadow: 0 4px 12px 0 var(--lightGrey);
+}
+
+/******************** Join **********************/
+
+.join {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: white;
+}
+
+.join p {
+  color: var(--blueGrey);
+}
+
+/******************** Subscribe **********************/
+
+.subscribe {
+  background-color: var(--cyan);
+  border-bottom-left-radius: 8px;
+}
+
+.subscribe .pricing {
+  display: flex;
+  align-items: center;
+  color: #9feff1;
+}
+
+.subscribe .pricing .price {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  padding-right: 14px;
+}
+
+button {
+  background-color: var(--yellow);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: var(--yellow);
+}
+
+/******************** Why Us **********************/
+
+.why-us {
+  background-color: var(--cyan-lighter);
+  border-bottom-right-radius: 8px;
+}
+
+.why-us ul {
+ list-style:none;
+ margin:0px;
+ padding:0px;
+ color: #daffff;
+}
+
+.why-us li {
+  line-height:24px;
+}
+
+/******************** Width>640px **********************/
+
+@media screen and (min-width: 640px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 640px;
+  }
+
+  .join {
+    grid-column: 1 / 3;
+  }
+}
